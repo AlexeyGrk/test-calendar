@@ -28,6 +28,7 @@ const CalendarLayout = ({
     );
   };
   const isCurrentDay = (day) => moment().isSame(day, "day");
+  const isCurrentMonth = (day) => currentMomentToday.isSame(day, "month");
 
   return (
     <div className="calendar-container">
@@ -47,9 +48,13 @@ const CalendarLayout = ({
               <button
                 onClick={() => activeDateHandler(daysItem)}
                 key={daysItem.format("DDMMYYYY")}
-                className={
-                  isCurrentDay(daysItem) ? "active-day" : "not-active-day"
+                className={`
+                ${
+                  isCurrentMonth(daysItem)
+                    ? "current-month-day"
+                    : "not-current-month-day"
                 }
+                ${isCurrentDay(daysItem) ? "active-day" : "not-active-day"}`}
               >
                 {daysItem.format("DD")}
               </button>
