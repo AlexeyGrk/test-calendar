@@ -18,7 +18,6 @@ function App() {
     .startOf("week");
   const prevHandler = () => {
     setCurrentMomentToday((prev) => prev.clone().subtract(1, "month"));
-    console.log("prev");
   };
   const nextHandler = () => {
     setCurrentMomentToday((prev) => prev.clone().add(1, "month"));
