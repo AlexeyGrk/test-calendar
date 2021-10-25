@@ -21,21 +21,6 @@
 .date-grid {
   margin-bottom: 25px;
 }
-.date-grid > button {
-  color: $colorNumber;
-  background-color: Transparent;
-  background-repeat: no-repeat;
-  border: none;
-  cursor: pointer;
-  overflow: hidden;
-  width: 45px;
-  height: 40px;
-
-  &:hover {
-    background-color: $mainYellow;
-    color: black;
-  }
-}
 
 .date-day-grid {
   display: flex;
@@ -70,5 +55,24 @@
 @media screen and (max-width: 767px) {
   .calendar-container {
     width: 100%;
+  }
+}
+
+.active-day {
+  background-color: $mainYellow;
+  color: black;
+}
+.not-active-day {
+  color: $colorNumber;
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  width: 45px;
+  height: 40px;
+  &:hover {
+    background-color: $mainYellow;
+    color: black;
   }
 }

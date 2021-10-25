@@ -1,4 +1,5 @@
 import React from "react";
+import moment from "moment";
 import { useDispatch } from "react-redux";
 import { setCurrentDayData } from "../../redux/slice/currentDaySlice";
 const CalendarLayout = ({
@@ -26,6 +27,7 @@ const CalendarLayout = ({
       })
     );
   };
+  const isCurrentDay = (day) => moment().isSame(day, "day");
 
   return (
     <div className="calendar-container">
@@ -45,6 +47,9 @@ const CalendarLayout = ({
               <button
                 onClick={() => activeDateHandler(daysItem)}
                 key={daysItem.format("DDMMYYYY")}
+                className={
+                  isCurrentDay(daysItem) ? "active-day" : "not-active-day"
+                }
               >
                 {daysItem.format("DD")}
               </button>
