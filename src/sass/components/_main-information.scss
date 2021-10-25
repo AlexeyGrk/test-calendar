@@ -1,0 +1,27 @@
+.main-information-container {
+  padding-top: 195px;
+  padding-right: 20px;
+}
+.main-title {
+  font-family: $primaryFontBold;
+  font-size: 40px;
+  color: $mainYellow;
+  font-weight: bold;
+  font-style: normal;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  text-align: end;
+}
+
+.main-text {
+  text-align: end;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-top: 44px;
+  font-weight: 300;
+}
+@media screen and (max-width: 767px) {
+  .main-information-container {
+    display: none;
+  }
+}

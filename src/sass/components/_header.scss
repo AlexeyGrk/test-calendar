@@ -1,0 +1,60 @@
+.App-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 150px;
+  background-color: $white;
+  padding: 0 110px;
+}
+@media screen and (max-width: 767px) {
+  .App-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .navigation {
+      margin-bottom: 10px;
+    }
+  }
+}
+.navigation {
+  display: flex;
+  justify-content: space-between;
+}
+.navigation > a {
+  color: $navBtnColor;
+  text-align: left;
+  font-family: $primaryFontLight;
+  font-weight: 500;
+  letter-spacing: 0.56px;
+  text-transform: uppercase;
+}
+.navigation > a:not(:last-child) {
+  margin-right: 70px;
+}
+.logo {
+  font-family: $primaryFontBold;
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+  color: $navBtnColor;
+  font-weight: 500;
+}
+.logo-item-vertical {
+  padding: 0 2px;
+
+  margin: 0;
+  background-color: $mainYellow;
+}
+.logo-item-vertical-letter {
+  display: block;
+  text-align: center;
+  letter-spacing: 0;
+}
+.logo-item-big-r {
+  font-size: 40px;
+}
+.logo-item-devs {
+  font-size: 25px;
+  margin-top: 35px;
+}
